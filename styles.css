@@ -1,0 +1,35 @@
+#body {
+    margin: 0;
+    background-color: black;
+}
+
+#slides{
+    background: black;
+}
+
+.carousel-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.carousel{
+    border: solid 2px black;
+}
+
+#jumboEPIC{
+    background: black;
+    color: white; 
+}
+
+#jumboAPOD{
+    background: black;
+    color: white; 
+}
+
+.image-container{
+    background: black;
+    display: flex;
+    justify-content: center;
+}
