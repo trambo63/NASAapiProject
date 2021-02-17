@@ -102,6 +102,7 @@ function displayImgByDate(json){
         let imgURL = `https://api.nasa.gov/EPIC/archive/natural/${imgYear}/${imgMonth}/${imgDay}/png/${mainImg}.png?api_key=${key}`
         console.log(imgURL);
         
+        
         let carouselItem = document.createElement('div');
         carouselItem.classList.add('carousel-item');
         //carouselItem.classList.add('active');

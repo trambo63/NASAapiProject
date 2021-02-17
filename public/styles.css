@@ -1,6 +1,17 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 #bodyMain {
     margin: 0;
     background: black;
+}
+
+.header{
+    font-style: italic;
+    color: rgba(197, 197, 197, 0.801);
+    padding: 2em;
 }
 
 #slides{
@@ -23,15 +34,20 @@
 }
 
 #jumboEPIC{
-    color: white;
-    background: url("https://www.nasa.gov/sites/default/files/image1-dscovrl1-orbit.jpg") center;
+    color: rgb(216, 216, 216);
+    background: url("https://www.nasa.gov/sites/default/files/image1-dscovrl1-orbit.jpg") center bottom;
     background-size: cover;
     margin: 20px;
-    height: 550px; 
+    height: 500px;
+}
+
+.jumbotronContentLead{
+    width: 300px;
+    margin-top: 0px;
 }
 
 .jumbotronContent{
-    margin-top: 100px;
+    margin-top: 190px;
     width: 300px;
 }
 
@@ -80,11 +96,25 @@
 /* search date */
 .dateSearchContainer{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px;
 }
 
+.searchCardHeader{
+    font-style: italic;
+    margin: 10px;
+}
+
+#searchBtn{
+    margin-left: 20px;
+}
+
 #searchCard{
     margin: 20px;
+}
+
+iframe{
+    width: 800px;
+    height: 450px;    
 }

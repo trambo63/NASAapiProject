@@ -38,10 +38,21 @@ function displayApod(json){
     let copyrightAPOD = document.createElement('p');
     copyrightAPOD.textContent = json[0].copyright;
 
-
-    imgContainer.appendChild(apodImg);
-    jumboAPOD.appendChild(title);
-    jumboAPOD.appendChild(explanation);
-    jumboAPOD.appendChild(dateAPOD);
-    jumboAPOD.appendChild(copyrightAPOD);
+    let mediaType = json[0].media_type;
+    console.log(mediaType);
+    if(mediaType == 'video'){
+        let iframe = document.createElement('iframe');
+        iframe.src = json[0].url;
+        imgContainer.appendChild(iframe);
+        jumboAPOD.appendChild(title);
+        jumboAPOD.appendChild(explanation);
+        jumboAPOD.appendChild(dateAPOD);
+        jumboAPOD.appendChild(copyrightAPOD);
+    } else {
+        imgContainer.appendChild(apodImg);
+        jumboAPOD.appendChild(title);
+        jumboAPOD.appendChild(explanation);
+        jumboAPOD.appendChild(dateAPOD);
+        jumboAPOD.appendChild(copyrightAPOD);
+    }
 }

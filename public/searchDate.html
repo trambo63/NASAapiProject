@@ -4,43 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"></head>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body id="bodyGallery">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">EPIC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="galleryEPIC.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="searchDate.html">Search Date</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <div class="card" id="searchCard">
         <div class="card-header">
+          <div class="searchCardHeader">
+            <p>First date available 2015-06-13</p>
+          </div>
             <form class="dateSearchContainer">
-                <p>
-                    <label for="date">Enter date (format YYYYMMDD): </label>
-                    <input type="date" id="date" class="date" pattern="[0-9]{8}">
-                </p>
-                <p>
-                    <button class="submit">Submit search</button>
-                </p>
+              <div>
+                  <label for="date">Enter date (format YYYYMMDD): </label>
+                  <input type="date" id="date" class="date" pattern="[0-9]{8}">
+              </div>
+              <div>
+                  <button class="btn btn-secondary btn-md" id="searchBtn">Submit search</button>
+              </div>
             </form>
         </div>
         <div class="card-body" id="galleryCardInner">
