@@ -17,6 +17,9 @@ function fetchEpic(){
 }
 
 function displayMain(json){
+    if(json.length == 0){
+        alert("No Images Found!");
+    }
     console.log('in displayMain');
     json.forEach(function(json){
         
@@ -48,6 +51,11 @@ function displayMain(json){
         carouselItem.appendChild(dateCaption);
         carouselItem.appendChild(carouselImg);
         carouselItem.appendChild(caption);
+
+        if(carouselItem == innerCarousel.firstElementChild){
+            carouselItem.classList.add('active');
+        }
+
     });
 }
 
@@ -59,6 +67,7 @@ searchByDate.addEventListener('submit', fetchImgByDate);
 
 function fetchImgByDate(e){
     e.preventDefault();
+    
     console.log('in fetch');
     let dateSearchURL = `https://api.nasa.gov/EPIC/api/natural/date/${date.value}?api_key=${key}`;
     console.log(dateSearchURL);
@@ -69,10 +78,18 @@ function fetchImgByDate(e){
     }).then(function(json) {
         console.log(json);
         displayImgByDate(json);
+    }).catch(function(){
+        alert("No Images for this Date")
     });
 }
 
 function displayImgByDate(json){
+    while (searchInnerCarousel.firstChild) {
+        searchInnerCarousel.removeChild(searchInnerCarousel.firstChild); // Simply put, the while loop will clear out any articles before new search results are added.
+    }
+    if(json.length == 0){
+        alert("No Images Found!");
+    }
     console.log('in display function');
     json.forEach(function(json){
         let mainImg = json.image;
@@ -103,5 +120,9 @@ function displayImgByDate(json){
         carouselItem.appendChild(dateCaption);
         carouselItem.appendChild(carouselImg);
         carouselItem.appendChild(caption);
+
+        if(carouselItem == searchInnerCarousel.firstElementChild){
+            carouselItem.classList.add('active');
+        }
     });
 }

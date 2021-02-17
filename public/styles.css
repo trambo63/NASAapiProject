@@ -23,8 +23,20 @@
 }
 
 #jumboEPIC{
-    background: black;
-    color: white; 
+    color: white;
+    background: url("../public/assets/image1-dscovrl1-orbit.jpg") center;
+    background-size: cover;
+    margin: 20px;
+    height: 550px; 
+}
+
+.jumbotronContent{
+    margin-top: 100px;
+    width: 300px;
+}
+
+#DSCOVER{
+    margin-top: 10px;
 }
 
 #jumboAPOD{
