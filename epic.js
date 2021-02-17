@@ -1,5 +1,6 @@
 const key = 'r2jRbdbVKRy6mnkRnkRP8YgBfg1DKYgZq9n5vIoz';
 const epicURL = `https://api.nasa.gov/EPIC/api/natural/?api_key=${key}`;
+const innerCarousel = document.querySelector('#main-carousel');
 
 fetchEpic();
 
@@ -13,14 +14,9 @@ function fetchEpic(){
         displayMain(json);
     });
 }
-const innerCarousel = document.querySelector('.carousel-inner');
-// let first = innerCarousel.firstElementChild;
-// first.classList.add('active');
 
 function displayMain(json){
-    
-    console.log('in fuction')
-    console.log(json)
+    console.log('in displayMain');
     json.forEach(function(json){
         
         let mainImg = json.image;
@@ -53,3 +49,5 @@ function displayMain(json){
         carouselItem.appendChild(caption);
     });
 }
+
+

@@ -1,6 +1,6 @@
-#body {
+#bodyMain {
     margin: 0;
-    background-color: black;
+    background: black;
 }
 
 #slides{
@@ -15,7 +15,11 @@
     height: 100%;
 }
 .carousel{
-    border: solid 2px black;
+    /* border: solid 2px black; */
+}
+
+.image-container{
+    margin: 10px;
 }
 
 #jumboEPIC{
@@ -32,4 +36,39 @@
     background: black;
     display: flex;
     justify-content: center;
+}
+
+
+/* GALLERY */
+#bodyGallery{
+    background: black;
+}
+
+.galleryContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cardSubText{
+}
+
+#galleryCard{
+    margin: 10px;
+    max-width: 600px;
+}
+
+#galleryCardInner{
+    background: black;
+    color: white;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+/* search date */
+.dateSearchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
