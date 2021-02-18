@@ -166,3 +166,10 @@ body{
     margin-top: 250px;
     width: 300px;
 }
+
+.button{
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
