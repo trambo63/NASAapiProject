@@ -2,16 +2,11 @@ const key = 'r2jRbdbVKRy6mnkRnkRP8YgBfg1DKYgZq9n5vIoz';
 const epicURL = `https://api.nasa.gov/EPIC/api/natural/?api_key=${key}`;
 const innerCarousel = document.querySelector('#main-carousel');
 const marsGalleryContainer = document.querySelector('.marsGalleryContainer');
-const prevBtn = document.querySelector('#prev');
-const nextBtn = document.querySelector('#next');
 
-let pageCount = 1;
-let marsRoverURL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${pageCount}&api_key=${key}`;
 
 fetchEpic();
-fetchMarsRover(marsRoverURL);
-nextBtn.addEventListener('click', nextPage);
-prevBtn.addEventListener('click', previousPage); 
+
+
 
 
 function fetchEpic(){
@@ -136,58 +131,5 @@ function displayImgByDate(json){
     });
 }
 
-// Mars Rover
 
-
-function fetchMarsRover(){
-    
-    fetch(marsRoverURL)
-    .then(result => {
-        return result.json();
-    })
-    .then(json =>{
-        console.log(json);
-        displayMarsPhotos(json);
-    });
-}
-
-function nextPage(e) {
-    pageCount++;
-    fetchMarsRover(marsRoverURL);
-};
-
-function displayMarsPhotos(json) {
-    console.log(marsRoverURL);
-    // while (marsGalleryContainer.firstChild) {
-    //     marsGalleryContainer.removeChild(marsGalleryContainer.firstChild);
-    // }
-    let photos = json.photos;
-    console.log(photos);
-    photos.forEach(function(json){
-        console.log(json.img_src);
-        let imgSrc = json.img_src;
-        
-        let marsImgContainer = document.createElement('div');
-        marsImgContainer.classList.add('marsImgContainer');
-        let marsImg = document.createElement('img');
-        marsImg.classList.add('image-fluid');
-        marsImg.src = imgSrc;
-
-        let dateCaption = document.createElement('p');
-        dateCaption.textContent = json.earth_date;
-        
-        let caption = document.createElement('p');
-        caption.textContent = json.camera.full_name;
-
-        marsGalleryContainer.appendChild(marsImgContainer);
-        marsImgContainer.appendChild(dateCaption);
-        marsImgContainer.appendChild(caption);
-        marsImgContainer.appendChild(marsImg);
-
-        // if(carouselItem == innerCarouselMars.firstElementChild){
-        //     carouselItem.classList.add('active');
-        // }
-
-    });
-}
 
