@@ -3,11 +3,7 @@ const epicURL = `https://api.nasa.gov/EPIC/api/natural/?api_key=${key}`;
 const innerCarousel = document.querySelector('#main-carousel');
 const marsGalleryContainer = document.querySelector('.marsGalleryContainer');
 
-
 fetchEpic();
-
-
-
 
 function fetchEpic(){
     fetch(epicURL)
