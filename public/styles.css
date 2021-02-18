@@ -153,3 +153,16 @@ body{
 .pageCount{
     color: white;
 }
+
+#jumboMars{
+    color: rgb(216, 216, 216);
+    background: url("https://www.nasa.gov/sites/default/files/thumbnails/image/pia23378-16.jpg") center top;
+    background-size: cover;
+    margin: 20px;
+    height: 500px;
+}
+
+.jumbotronContentMars{
+    margin-top: 250px;
+    width: 300px;
+}
